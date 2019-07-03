@@ -4,7 +4,7 @@ function getContainerPort() {
     echo $(docker port $1 | sed 's/.*://g')
 }
 
-docker pull jenkins:2.60.1
+docker pull jenkinsci/blueocean
 docker pull sonarqube:6.3.1
 
 if [ ! -d downloads ]; then
